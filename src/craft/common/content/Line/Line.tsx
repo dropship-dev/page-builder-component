@@ -1,4 +1,4 @@
-import { LineProps } from './Line.types'
+import { LineProps } from './types'
 
 const Line: React.FC<Partial<LineProps>> = ({
   className,

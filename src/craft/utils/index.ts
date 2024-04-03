@@ -1,16 +1,16 @@
 import { camelCase } from 'lodash'
-import React from 'react'
+import React, { ReactElement } from 'react'
 import * as resolverComponents from '../'
 
-export const getNode = (nodes: Object, id: string) => {
+export const getNode = (nodes: any, id: string): ReactElement => {
   const node = nodes[id]
   const componentType = node.type
-  const children = node.nodes
+  const children: ReactElement[] = node.nodes
     ? node.nodes.map((_id: string) => {
         return getNode(nodes, _id)
       })
     : []
-  const linkedNodes = node.linkedNodes
+  const linkedNodes: any = node.linkedNodes
     ? Object.fromEntries(
         Object.entries(node.linkedNodes).map(([linkId, _id]) => [
           linkId,
