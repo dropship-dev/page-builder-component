@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface ContainerProps
+export interface LayoutProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, 'is'> {
-  placeHolder?: string
+  gap: number
 }
