@@ -18,6 +18,8 @@ jobs:
           node-version: 18.x
           cache: 'yarn'
       - run: yarn
+        env:
+          PRIVATE_REPO_AUTH: ${{ secrets.PRIVATE_REPO_AUTH }}
       - run: yarn build
       - run: |
           cp package.json dist/
