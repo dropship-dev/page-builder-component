@@ -42,7 +42,7 @@ interface ProductState {
   textPlaceholders: {
     [key: string]: string
   }
-  product?: ProductData
+  product?: any
 }
 
 export const useProductStore = create<ProductState>((set) => ({
