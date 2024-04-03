@@ -1,0 +1,11 @@
+import parse from 'html-react-parser';
+import { get } from 'lodash';
+import { useProductStore } from '../../store/product-page';
+const ProductDescription = ({ className }) => {
+    const product = useProductStore((state) => state.product);
+    const details = get(product, 'details', null);
+    if (!details)
+        return null;
+    return <div className={`ck-content ${className}`}>{parse(details)}</div>;
+};
+export { ProductDescription };

@@ -1,0 +1,45 @@
+{
+  "name": "page-builder-component",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "./scripts/remove-files.sh && tsc",
+    "lint:fix": "prettier --write .",
+    "_preinstall": "npx husky install && ./scripts/inspect-github-token.sh",
+    "lib:update": "yarn upgrade @dropship-dev/client-api @dropship-dev/react-components"
+  },
+  "dependencies": {
+    "@dropship-dev/client-api": "git+https://nvti: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@github.com/dropship-dev/client-lib.git#build",
+    "@dropship-dev/react-components": "git+https://nvti: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@github.com/dropship-dev/react-components.git#build",
+    "@hookform/resolvers": "^3.3.2",
+    "@paypal/react-paypal-js": "paypal/react-paypal-js",
+    "@uiw/color-convert": "^2.1.1",
+    "@uiw/react-color-sketch": "^2.1.1",
+    "html-react-parser": "^5.1.10",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "sass": "^1.64.2",
+    "swiper": "^11.1.0",
+    "swr": "^2.1.5",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.0",
+    "@types/moment-timezone": "^0.5.30",
+    "@types/node": "^17.0.12",
+    "@types/react": "^18.2.60",
+    "@types/react-dom": "^18.0.7",
+    "autoprefixer": "^10.4.14",
+    "encoding": "^0.1.13",
+    "eslint": "^8.41.0",
+    "eslint-config-custom": "*",
+    "husky": "^8.0.3",
+    "postcss": "^8.4.23",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.1.6"
+  }
+}
