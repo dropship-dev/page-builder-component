@@ -2,7 +2,7 @@ import { ContainerProps } from './types'
 
 const Container: React.FC<ContainerProps> = ({
   children,
-  placeHolder,
+  placeHolderText,
   ...props
 }) => {
   return <div {...props}>{children}</div>
