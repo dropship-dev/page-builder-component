@@ -4,7 +4,7 @@ import * as resolverComponents from '../'
 
 export const getNode = (nodes: any, id: string): ReactElement => {
   const node = nodes[id]
-  const componentType = node.type
+  const componentType: any = node.type
   const children: ReactElement[] = node.nodes
     ? node.nodes.map((_id: string) => {
         return getNode(nodes, _id)
