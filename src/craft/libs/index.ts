@@ -16,7 +16,7 @@ export const loadProductPageData = async (
 
   const product = await api.product.getProductByPermalink({
     storeId,
-    permalink: productData.permalink
+    permalink: productData?.permalink
   })
 
   useProductStore.setState({
@@ -29,7 +29,7 @@ export const loadProductPageData = async (
 
 export const unloadProductPageData = () => {
   useProductStore.setState({
-    product: null,
+    product: undefined,
     textPlaceholders: {}
   })
 }
