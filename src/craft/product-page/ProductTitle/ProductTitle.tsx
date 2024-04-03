@@ -12,7 +12,7 @@ const ProductTitle: React.FC<Partial<ProductTitleProps>> = ({
   const textPlaceholders = useProductStore((state) => state.textPlaceholders)
   const content = replaceAllPlaceholderText({
     phrases: textPlaceholders,
-    originalStr: title
+    originalStr: title ?? ''
   })
 
   const style: React.CSSProperties = {
