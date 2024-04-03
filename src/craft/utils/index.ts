@@ -1,4 +1,37 @@
 import { camelCase } from 'lodash'
+import React from 'react'
+import * as resolverComponents from '../'
+
+export const getNode = (nodes: Object, id: string) => {
+  const node = nodes[id]
+  const componentType = node.type
+  const children = node.nodes
+    ? node.nodes.map((_id: string) => {
+        return getNode(nodes, _id)
+      })
+    : []
+  const linkedNodes = node.linkedNodes
+    ? Object.fromEntries(
+        Object.entries(node.linkedNodes).map(([linkId, _id]) => [
+          linkId,
+          getNode(nodes, _id as string)
+        ])
+      )
+    : {}
+
+  const component = React.createElement(
+    typeof componentType === 'string'
+      ? componentType
+      : resolverComponents[componentType.resolvedName],
+    {
+      key: id,
+      ...linkedNodes,
+      ...node.props
+    },
+    ...children
+  )
+  return component
+}
 
 export const camelToKebab = (camelCase: string): string => {
   return camelCase.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
