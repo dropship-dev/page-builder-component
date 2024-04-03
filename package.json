@@ -10,8 +10,8 @@
     "lib:update": "yarn upgrade @dropship-dev/client-api @dropship-dev/react-components"
   },
   "dependencies": {
-    "@dropship-dev/client-api": "git+https://nvti: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@github.com/dropship-dev/client-lib.git#build",
-    "@dropship-dev/react-components": "git+https://nvti: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@github.com/dropship-dev/react-components.git#build",
+    "@dropship-dev/client-api": "git+https://github.com/dropship-dev/client-lib.git#build",
+    "@dropship-dev/react-components": "git+https://github.com/dropship-dev/react-components.git#build",
     "@hookform/resolvers": "^3.3.2",
     "@paypal/react-paypal-js": "paypal/react-paypal-js",
     "@uiw/color-convert": "^2.1.1",
