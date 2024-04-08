@@ -1,4 +1,5 @@
 import { Review } from '@dropship-dev/client-api/api/store'
+import Image from 'next/image'
 import Rating from './Rating'
 
 export const ReviewItem = ({ data }: { data: Review }) => {
@@ -27,7 +28,7 @@ export const ReviewItem = ({ data }: { data: Review }) => {
                       key={item}
                       className="flex h-[80px] w-[80px] items-center justify-center overflow-hidden"
                     >
-                      <img
+                      <Image
                         src={item}
                         alt="image product"
                         width={80}

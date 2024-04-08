@@ -13,6 +13,7 @@ import {
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
+import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -55,7 +56,7 @@ const ProductImage: React.FC<Partial<ProductImageProps>> = ({ className }) => {
       >
         {productImages.map((data, index) => (
           <SwiperSlide key={index}>
-            <img src={data.url} alt="" className="rounded object-contain" />
+            <Image src={data.url} alt="" className="rounded object-contain" />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -78,7 +79,11 @@ const ProductImage: React.FC<Partial<ProductImageProps>> = ({ className }) => {
               className="h-full w-1/4 max-[640px]:h-[64px] max-[640px]:w-[64px]"
             >
               <div className="items-center justify-center max-[640px]:flex max-[640px]:h-[64px] max-[640px]:w-[64px]">
-                <img src={data.url} alt="" className="rounded object-contain" />
+                <Image
+                  src={data.url}
+                  alt=""
+                  className="rounded object-contain"
+                />
               </div>
             </SwiperSlide>
           ))}

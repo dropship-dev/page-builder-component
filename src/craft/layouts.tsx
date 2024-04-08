@@ -1,4 +1,5 @@
 import { Element, Node, NodeHelpersType, NodeRules } from '@craftjs/core'
+import Image from 'next/image'
 import * as components from '~/src/craft/craft'
 
 const productImageContainerRules: Partial<NodeRules> = {
@@ -81,7 +82,7 @@ export const productDetailLayout = (
       </div>
       <div className="mb-6 flex flex-row gap-2 max-[640px]:mb-3">
         <div className="w-6 flex-shrink-0 max-[640px]:mt-0">
-          <img
+          <Image
             src="https://cdn.bettamax.com/dev/2023-10-30/global.svg"
             alt=""
             width={24}
@@ -95,7 +96,7 @@ export const productDetailLayout = (
       </div>
       <div className="mb-6 flex flex-row gap-2 max-[640px]:mb-3">
         <div className="flex-shrink-0 max-[640px]:mt-0">
-          <img
+          <Image
             src="https://cdn.bettamax.com/dev/2023-10-30/delivery.svg"
             alt=""
             width={24}
@@ -108,7 +109,7 @@ export const productDetailLayout = (
       </div>
       <div className="flex flex-row gap-2">
         <div className="flex-shrink-0 max-[640px]:mt-0">
-          <img
+          <Image
             src="https://cdn.bettamax.com/dev/2023-10-30/box.svg"
             alt=""
             width={24}
